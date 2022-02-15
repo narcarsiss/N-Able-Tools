@@ -12,7 +12,7 @@ I do not claim to own ANY scripts or code found on the Interwebz
 ___
 
 
-::: FOOTNOTE
+::: warning
 *These Scripts are provided AS-IS | no warranty |*
 *little to no Support at the best of times.*
 *May actually break your systems.*
