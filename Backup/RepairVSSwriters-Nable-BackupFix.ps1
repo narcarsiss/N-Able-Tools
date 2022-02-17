@@ -14,6 +14,8 @@ Write-Output "DOES NOT SUPPORT MACOSx" "Before you run this Script you **MUST** 
 $UserSaysYes = Read-Host -Prompt 'Do you want to restart >>> Y / N?'
 Write-Output $UserSaysYes
 
+$WriterName = vssadmin list writers | select-string -SimpleMatch "writer name:", "state"
+
 #Restart computer by force and use the name of this local machine.
 if ($UserSaysYes -eq "y") {
     #    Restart-Computer -ComputerName $env:COMPUTERNAME -Force
@@ -37,7 +39,6 @@ else {
     #>
     # Store writer list into varible then we will string match in a switch statement
     
-    $WriterName = vssadmin list writers | select-string -SimpleMatch "writer name:", "state"
     Write-Output "TEST" $WriterName
     switch ($WriterName) {
         'Task Scheduler Writer' { Write-Output "1" }
