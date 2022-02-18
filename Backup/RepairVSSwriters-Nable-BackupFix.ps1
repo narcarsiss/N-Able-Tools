@@ -1,8 +1,10 @@
 #Requires -RunAsAdministrator
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
-<#What does this Script do?
-Repairs the VSS wrihters when the Backup system in N-able fails
-It first checks for the Permissions and Reports back to the User in a logfile created in c:\ProCompLogs\BackupLog.txt
+<#
+! What does this Script do?
+? Repairs the VSS wrihters when the Backup system in N-able fails
+* It first checks for the Permissions and Reports back to the User in a logfile created in c:\ProCompLogs\BackupLog.txt
 #After the server reboot
 #please run "vssadmin list writers" to check if the "System Writer" can be displayed.
 #verify that the Cryptographic Services logon as the credentials of the "Network Service"
@@ -104,16 +106,6 @@ vssvc /register
 Net Start SWPRV
 Net Start VSS
 #>
-
-
-
-
-
-
-
-
-
-
 
 
 
