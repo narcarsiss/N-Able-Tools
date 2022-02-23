@@ -19,8 +19,6 @@ TODO:
 #>
 
 
-
-
 #Get Computer Name and store as varible
 Write-Output "", "!~~~~ DO NOT RUN ON A SERVER ~~~~!",""
 Write-Output "****YOU UNDERSTAND THIS SCRIPT MAY MAKE IT WORSE**", "**NO MY FAULT OF PROBLEM**", "**RUN AT OWN RISK**", 
